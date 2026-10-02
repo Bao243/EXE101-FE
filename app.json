@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MealMate",
-    "slug": "MealMate",
+    "name": "MealBuddy",
+    "slug": "MealBuddy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

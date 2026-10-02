@@ -20,7 +20,10 @@ const host = Platform.select({
   default: IOS_SIMULATOR_HOST,
 });
 
-export const BASE_URL = ENV_BASE || `https://exe-be-v4pd.onrender.com/api`;
+// BASE_URL - chọn 1 trong 3 tùy môi trường:
+export const BASE_URL = 'https://exe101-be-p1xz.onrender.com/api';
+// export const BASE_URL = 'http://10.0.2.2:3000/api';          // Android Emulator + local BE
+// export const BASE_URL = 'http://192.168.1.50:3000/api';      // Thiết bị thật + local BE
 
 async function handleJson(response) {
   const text = await response.text();
@@ -98,12 +101,12 @@ export async function callWithAutoRefresh(apiCall) {
     // Check trong message hoặc status code
     const errorMessage = error.message || '';
     const isMissingToken = errorMessage.toLowerCase().includes('missing access token');
-    const isUnauthorized = errorMessage.includes('401') || 
-                          errorMessage.includes('Unauthorized') ||
-                          errorMessage.toLowerCase().includes('token expired') ||
-                          errorMessage.toLowerCase().includes('invalid token') ||
-                          isMissingToken;
-    
+    const isUnauthorized = errorMessage.includes('401') ||
+      errorMessage.includes('Unauthorized') ||
+      errorMessage.toLowerCase().includes('token expired') ||
+      errorMessage.toLowerCase().includes('invalid token') ||
+      isMissingToken;
+
     if (isUnauthorized) {
       // Nếu không có token, không thử refresh
       if (isMissingToken) {
@@ -111,7 +114,7 @@ export async function callWithAutoRefresh(apiCall) {
         await AsyncStorage.removeItem('refreshToken');
         throw new Error('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.');
       }
-      
+
       try {
         // Thử refresh token
         await refreshTokens();

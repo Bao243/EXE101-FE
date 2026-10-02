@@ -1,1 +1,1 @@
-# EXE201-FE_Mealmate
+# MealBuddy

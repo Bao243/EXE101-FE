@@ -103,7 +103,7 @@ export default function RegisterScreen({ navigation }) {
         <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn}>
           <Ionicons name="chevron-back" size={22} color="#1F1F1F" />
         </TouchableOpacity>
-        <Image source={require('../../assets/images/MealMate Logo.png')} style={styles.logoTop} resizeMode="contain" />
+        <Image source={require('../../assets/images/MealBuddy Logo.png')} style={styles.logoTop} resizeMode="contain" />
         <Text style={styles.title}>Đăng ký</Text>
 
         <Text style={styles.label}>Tên đăng nhập</Text>
@@ -188,7 +188,7 @@ export default function RegisterScreen({ navigation }) {
               if (!/^\d{4}-\d{2}-\d{2}$/.test(birthDate)) { alert('Ngày sinh phải theo định dạng YYYY-MM-DD'); return; }
               await registerApi({ username, password, phoneNumber, email, fullName, gender, birthDate, job });
               // Push cục bộ: tạo tài khoản thành công
-              pushLocalNotification({ title: 'Tạo tài khoản thành công', body: `Chào mừng ${fullName || username} đến MealMate!` });
+              pushLocalNotification({ title: 'Tạo tài khoản thành công', body: `Chào mừng ${fullName || username} đến MealBuddy!` });
               alert('Đăng ký thành công. Vui lòng đăng nhập');
               navigation.reset({ index: 0, routes: [{ name: 'LoginForm' }] });
             } catch (e) {

@@ -21,7 +21,7 @@ export default function LegalTermsScreen() {
           <View style={styles.cardShadow}>
             <View style={styles.card}> 
               <Chip icon="file-document-outline" text="Phiên bản 1.0" />
-              <Text style={styles.lead}>Bằng việc sử dụng MealMate, bạn đồng ý tuân thủ các điều khoản dưới đây. Vui lòng đọc kỹ để hiểu quyền và nghĩa vụ của bạn.</Text>
+              <Text style={styles.lead}>Bằng việc sử dụng MealBuddy, bạn đồng ý tuân thủ các điều khoản dưới đây. Vui lòng đọc kỹ để hiểu quyền và nghĩa vụ của bạn.</Text>
               <SectionTitle index={1} title="Tài khoản" />
               <Bullet text="Bạn chịu trách nhiệm bảo mật thông tin đăng nhập." />
               <Bullet text="Không chia sẻ tài khoản cho bên thứ ba." />
@@ -29,7 +29,7 @@ export default function LegalTermsScreen() {
               <Bullet text="Chúng tôi chỉ thu thập dữ liệu tối thiểu nhằm cải thiện trải nghiệm." />
               <Bullet text="Bạn có thể yêu cầu truy cập/chỉnh sửa/xóa dữ liệu." />
               <SectionTitle index={3} title="Giới hạn trách nhiệm" />
-              <Bullet text="MealMate không chịu trách nhiệm cho thiệt hại gián tiếp hoặc do sử dụng sai mục đích." />
+              <Bullet text="MealBuddy không chịu trách nhiệm cho thiệt hại gián tiếp hoặc do sử dụng sai mục đích." />
             </View>
           </View>
         </ScrollView>

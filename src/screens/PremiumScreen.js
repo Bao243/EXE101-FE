@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Linking, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Linking, Image } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -50,9 +50,12 @@ export default function PremiumScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground source={require('../../assets/images/MealMate Logo.png')} style={styles.bg} resizeMode="cover">
-        <View style={styles.overlay} />
-      </ImageBackground>
+      <Image
+        source={require('../../assets/images/MealBuddy Premium Background.png')}
+        style={styles.bg}
+        resizeMode="cover"
+      />
+      <View pointerEvents="none" style={styles.overlay} />
 
       <TouchableOpacity 
         onPress={() => navigation.goBack()} 
@@ -103,9 +106,13 @@ function Feature({ text }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#000' },
-  bg: { ...StyleSheet.absoluteFillObject },
-  overlay: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(0,0,0,0.8)' },
+  container: { flex: 1, width: '100%', backgroundColor: '#000', overflow: 'hidden' },
+  bg: {
+    ...StyleSheet.absoluteFillObject,
+    width: '100%',
+    height: '100%',
+  },
+  overlay: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(0,0,0,0.38)' },
   backBtn: { 
     position: 'absolute', 
     left: 16, 

@@ -10,7 +10,7 @@ export default function LoadingScreen({ navigation }) {
 
   return (
     <LinearGradient colors={["#F4E4B5", "#F1CF82"]} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }} style={styles.full}>
-      <Image source={require('../../assets/images/MealMate Logo.png')} style={styles.logo} resizeMode="contain" />
+      <Image source={require('../../assets/images/MealBuddy Logo.png')} style={styles.logo} resizeMode="contain" />
     </LinearGradient>
   );
 }

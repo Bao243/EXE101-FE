@@ -8,7 +8,7 @@ Protocol: RIPER-5 + Multi-Dim + Agent + AI-Dev Guide
 Người dùng yêu cầu triển khai/deploy ứng dụng Expo React Native để xuất file APK.
 
 # Project Overview
-Ứng dụng MealMate xây dựng bằng Expo SDK 54 và React Native 0.81, cần cấu hình quy trình build APK (EAS Build hoặc CLI truyền thống) để phát hành.
+Ứng dụng MealBuddy xây dựng bằng Expo SDK 54 và React Native 0.81, cần cấu hình quy trình build APK (EAS Build hoặc CLI truyền thống) để phát hành.
 
 ---
 Sections below are maintained by AI during execution.

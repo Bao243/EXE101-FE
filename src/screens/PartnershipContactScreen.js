@@ -6,12 +6,12 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 export default function PartnershipContactScreen() {
-  const email = 'ngdlong2004@gmail.com';
+  const email = 'luungocbao243@gmail.com';
   const fanpageUrl = 'https://web.facebook.com/share/1BNpxVoLRr/?mibextid=wwXIfr&_rdc=1&_rdr';
-  const website = 'https://mealmate.app';
+  const website = 'Commingsoon';
   const navigation = useNavigation();
 
-  const openUrl = (url) => Linking.openURL(url).catch(() => {});
+  const openUrl = (url) => Linking.openURL(url).catch(() => { });
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
@@ -23,7 +23,7 @@ export default function PartnershipContactScreen() {
           </TouchableOpacity>
           <Text style={styles.title}>Liên hệ hợp tác</Text>
         </View>
-        <View style={styles.cardShadow}> 
+        <View style={styles.cardShadow}>
           <View style={styles.cardIntro}>
             <View style={styles.chip}><MaterialCommunityIcons name="clock-outline" size={16} color="#5A3E2B" /><Text style={styles.chipText}>Phản hồi trong 24h</Text></View>
             <Text style={styles.introText}>Chúng tôi sẵn sàng hợp tác với đối tác, KOLs, hoặc nhà tài trợ. Hãy liên hệ qua các kênh bên dưới.</Text>
@@ -33,7 +33,7 @@ export default function PartnershipContactScreen() {
           <View style={styles.card}>
             <Row icon={<Ionicons name="mail-outline" size={20} color="#5A3E2B" />} label="Email" value={email} onPress={() => openUrl(`mailto:${email}`)} actionIcon={<MaterialCommunityIcons name="open-in-new" size={18} color="#5A3E2B" />} />
             <Divider />
-            <Row icon={<Ionicons name="globe-outline" size={20} color="#5A3E2B" />} label="Website" value={website.replace('https://','')} onPress={() => openUrl(website)} actionIcon={<MaterialCommunityIcons name="open-in-new" size={18} color="#5A3E2B" />} />
+            <Row icon={<Ionicons name="globe-outline" size={20} color="#5A3E2B" />} label="Website" value={website.replace('https://', '')} onPress={() => openUrl(website)} actionIcon={<MaterialCommunityIcons name="open-in-new" size={18} color="#5A3E2B" />} />
             <Divider />
             <Row icon={<Ionicons name="logo-facebook" size={20} color="#5A3E2B" />} label="Fanpage" value="Facebook" onPress={() => openUrl(fanpageUrl)} actionIcon={<MaterialCommunityIcons name="open-in-new" size={18} color="#5A3E2B" />} />
           </View>
@@ -46,7 +46,7 @@ export default function PartnershipContactScreen() {
 function Row({ icon, label, value, onPress, actionIcon }) {
   return (
     <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
-      <View style={styles.row}> 
+      <View style={styles.row}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
           {icon}
           <Text style={styles.rowLabel}>{label}</Text>
