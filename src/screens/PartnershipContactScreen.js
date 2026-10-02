@@ -7,8 +7,8 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function PartnershipContactScreen() {
   const email = 'luungocbao243@gmail.com';
-  const fanpageUrl = 'https://web.facebook.com/share/1BNpxVoLRr/?mibextid=wwXIfr&_rdc=1&_rdr';
-  const website = 'Commingsoon';
+  const fanpageUrl = 'https://www.facebook.com/profile.php?id=61594666962018';
+  const website = 'Coming soon';
   const navigation = useNavigation();
 
   const openUrl = (url) => Linking.openURL(url).catch(() => { });
