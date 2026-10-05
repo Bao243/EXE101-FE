@@ -56,7 +56,7 @@ export default function LoginFormScreen({ navigation }) {
         <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn}>
           <Ionicons name="chevron-back" size={22} color="#1F1F1F" />
         </TouchableOpacity>
-        <Image source={require('../../assets/images/MealBuddy Logo.png')} style={styles.logoTop} resizeMode="contain" />
+        <Image source={require('../../assets/images/MealBuddy Logo Transparent.png')} style={styles.logoTop} resizeMode="contain" />
         <Text style={styles.title}>Đăng nhập</Text>
         <View style={styles.signupRow}>
           <Text style={styles.signupText}>Chưa có tài khoản?</Text>

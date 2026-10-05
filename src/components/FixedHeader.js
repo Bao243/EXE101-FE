@@ -12,7 +12,7 @@ export default function FixedHeader({ extraRight, onPressPremium }) {
   return (
     <View style={styles.header}>
       <View style={styles.leftBlock}>
-        <Image source={require('../../assets/images/MealBuddy Logo.png')} style={styles.logo} resizeMode="contain" />
+        <Image source={require('../../assets/images/MealBuddy Logo Transparent.png')} style={styles.logo} resizeMode="contain" />
         <View>
           <Text style={styles.logoText}>MealBuddy</Text>
           <Text style={styles.logoSub}>Plan, prep, and plate</Text>

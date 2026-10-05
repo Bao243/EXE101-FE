@@ -9,7 +9,7 @@ export default function LoginLandingScreen({ navigation }) {
   return (
     <SafeAreaView style={[styles.container, { paddingTop: insets.top, paddingBottom: insets.bottom }]}> 
       <View style={styles.card}>
-        <Image source={require('../../assets/images/MealBuddy Logo.png')} style={styles.logo} resizeMode="contain" />
+        <Image source={require('../../assets/images/MealBuddy Logo Transparent.png')} style={styles.logo} resizeMode="contain" />
 
         <View style={{ width: '100%', marginTop: 'auto' }}>
           <TouchableOpacity activeOpacity={0.85} onPress={() => navigation.navigate('LoginForm')}>
