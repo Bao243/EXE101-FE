@@ -140,6 +140,9 @@ export default function WeeklyMealPlanScreen() {
                   title: selectedMeal.title || selectedMeal.name || 'Món ăn',
                   desc: selectedMeal.desc || selectedMeal.description || '',
                   time: selectedMeal.time || '15 phút',
+                  totalKcal: selectedMeal.totalKcal,
+                  mealTime: selectedMeal.mealTime,
+                  image: selectedMeal.image,
                 });
               }
             });
@@ -312,12 +315,13 @@ export default function WeeklyMealPlanScreen() {
                 {MEAL_TIMES.map((mealTime, mealIdx) => {
                   const selectedMeal = getSelectedMeal(date, mealTime);
                   const targetCal = breakdown[mealTime] || 0;
+                  const displayCal = selectedMeal && selectedMeal.totalKcal ? selectedMeal.totalKcal : targetCal;
                   
                   return (
                     <View key={mealIdx} style={styles.mealRow}>
                       <View style={styles.mealInfo}>
                         <Text style={styles.mealLabel}>{MEAL_LABELS[mealIdx]}</Text>
-                        <Text style={styles.mealCal}>{fmtCal(targetCal)}</Text>
+                        <Text style={styles.mealCal}>{fmtCal(displayCal)}</Text>
                       </View>
                       <TouchableOpacity
                         style={[styles.mealButton, selectedMeal && styles.mealButtonSelected]}

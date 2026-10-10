@@ -37,11 +37,12 @@
     },
     "extra": {
       "eas": {
-        "projectId": "7a4d08b6-90e5-4198-bc01-2c8b521c6f01"
+        "projectId": "56f25c5b-b909-454e-8fae-ca4f4e63b050"
       }
     },
     "plugins": [
       "expo-web-browser"
-    ]
+    ],
+    "owner": "bell243"
   }
 }
